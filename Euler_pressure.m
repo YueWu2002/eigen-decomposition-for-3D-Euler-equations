@@ -8,7 +8,7 @@ function [p] = Euler_pressure(uu)
 %   p:  presssure, positive scalar
 
 gamma = 1.4;
-gammahat = 0.4;
+gammahat = 0.4; % gamma-1
 
 p = gammahat * (uu(5) - 0.5*sum(uu(2:4).^2) / uu(1));
 
